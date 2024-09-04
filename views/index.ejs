@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog Post Sub</title>
+    <link rel="stylesheet" href="/main.css">
+  </head>
+
+  <body>
+    <%- include("footer.ejs");%>
+    <h1>Blog submission board</h1>
+    <form action="/submit" id="form1"method= "POST">
+      <label for="post_title">Title of post:</label><br>
+      <input type="text" id="postTitle" name="pTitle"  placeholder="Enter text" value=""><br>
+      <label for="post_entry">Text entry of post:</labelfor></label><br>
+      <textarea type="text" id="textBox" name="tBox" placeholder="Enter text here..." ></textarea><br><br>
+      <input type="submit"id="submit" value="Submit">
+    </form>
+    
+      
+  </body>
+</html>
