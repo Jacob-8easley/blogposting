@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog Post Sub</title>
+    <%- include("partials/header.ejs") %>
     <link rel="stylesheet" href="/main.css">
   </head>
 
   <body>
-    <%- include("footer.ejs");%>
     <h1>Blog submission board</h1>
     <form action="/submit" id="form1"method= "POST">
       <label for="post_title">Title of post:</label><br>

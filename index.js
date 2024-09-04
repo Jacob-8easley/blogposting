@@ -8,13 +8,14 @@ import { title } from "process";
 
 const app = express();
 const port = 3000;
-
+app.set('views','./views');
+app.set('view engine','ejs')
 app.use(express.static("public"))
 
 app.use(bodyParser.urlencoded({extended:true}));
 //Get the homepage to submit infomation
 app.get("/",(req,res)=>{
-    res.render("views/partials/index.ejs");
+    res.render("index");
 })
 
 
@@ -34,7 +35,7 @@ app.post("/submit",(req,res)=>{
 
 
     //Rendering entered information onto new page
-    res.render("views/submit.ejs",{
+    res.render("submit.ejs",{
     title : req.body["pTitle"],
     post : req.body["tBox"],
     date: trimDate,
