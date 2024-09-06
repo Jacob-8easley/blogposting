@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog Post Sub</title>
-    <%- include("partials/header.ejs") %>
-    <link rel="stylesheet" href="/main.css">
-  </head>
-  <body>
-    <h1>This is my submission page</h1>   
-    <h2><%= title %></h2>
-    <h6><%=post%></h6>
-    <p><%=date%></p>
-      
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blog Post Sub</title>
+  <%- include("partials/header.ejs") %>
+</head>
+
+<body>
+  <h1>This is my submission page</h1>
+  <div class="posts">
+    <% hData.forEach((posts)=>{%>
+      <h3>
+        <%=posts.title%>
+      </h3>
+      <h6>
+        <%=posts.post[0]%>
+      </h6>
+      <p>
+        <%=posts.post[1]%>
+      </p>
+      <%})%>
+
+  </div>
+</body>
+<%- include("partials/footer.ejs")%>
+
+
 </html>
